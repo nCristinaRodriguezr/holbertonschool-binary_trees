@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "binary_trees.h"
 /**
- * binary_tree_insert_rihgt- This function makes a new node right
+ * binary_tree_insert_right- This function makes a new node right
  * with the conditions of users
  * @value: is integer number
  * @parent: is a pointer
@@ -17,12 +17,12 @@ binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value)
 		return (NULL);
 	}
 	new_node = binary_tree_node(parent, value);
-	if (parent->rihgt != NULL)
+	if (parent->right != NULL)
 	{
-		new_node->rihgt = parent->rihgt;
-		parent->rihgt->parent = new_node;
+		new_node->right = parent->right;
+		parent->right->parent = new_node;
 	}
-	parent->rihgt = new_node;
+	parent->right = new_node;
 	return (new_node);
 }
 
