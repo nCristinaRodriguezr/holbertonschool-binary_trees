@@ -11,7 +11,6 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	size_t altura_izquierda;
 	size_t altura_derecha;
 	size_t altura_actual;
-	int is_leaf;
 
 	if (tree == NULL)
 	{
@@ -20,9 +19,7 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	altura_izquierda = binary_tree_height(tree->left);
 	altura_derecha = binary_tree_height(tree->right);
 
-	is_leaf = binary_tree_is_leaf(tree);
-
-	if (is_leaf == 1)
+	if (tree->left == NULL && tree->right == NULL)
 	{
 		return (0);
 	}
