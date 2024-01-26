@@ -19,7 +19,7 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	altura_izquierda = binary_tree_height(tree->left);
 	altura_derecha = binary_tree_height(tree->right);
 
-	if (altura_izquierda == 0 && altura_derecha == 0)
+	if (binary_tree_is_leaf(tree) == 1)
 	{
 		return (0);
 	}
