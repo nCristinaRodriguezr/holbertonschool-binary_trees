@@ -8,7 +8,7 @@
  */
 int binary_tree_is_full(const binary_tree_t *tree)
 {
-	int left_ful;
+	int left_full;
 	int right_full;
 
 	if (tree == NULL)
