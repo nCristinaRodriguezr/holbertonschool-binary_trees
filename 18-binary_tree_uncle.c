@@ -29,6 +29,7 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 		{
 			return (grandparent->left);
 		}
+	}
 	else
 	{
 		return (NULL);
